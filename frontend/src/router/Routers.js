@@ -1,0 +1,27 @@
+import React from 'react'
+import {Routes,Route, Navigate} from 'react-router-dom'
+
+import Home from '../pages/Home.jsx';
+import Tours from '../pages/Tours.jsx';
+import ToursDetails from './../pages/TourDetails.jsx';
+import Login from '../pages/Login.jsx';
+import Register from '../pages/Register.jsx';
+import SearchResultList from '../pages/SearchResultList.jsx';
+
+
+
+const Routers = () => {
+    return (
+      <Routes>
+          <Route path = '/' element ={<Navigate to='/home'/>} />
+          <Route path='/home' element={<Home/>} />
+          <Route path='/tours' element={<Tours/>} />
+          <Route path='/tours/:id' element={<ToursDetails/>} />
+          <Route path='/login' element={<Login/>} />
+          <Route path='/register' element={<Register/>} />
+          <Route path='/tours/search' element={<SearchResultList/>} />
+      </Routes>
+    );
+};
+
+export default Routers;
